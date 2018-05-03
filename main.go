@@ -37,7 +37,7 @@ func main() {
 	router.HandleFunc("/user", GetUsersHander).Methods("GET")
 	router.HandleFunc("/user", CreateUserHander).Methods("POST")
 
-	http.Handle("/", router)
+	// http.Handle("/", router)
 	// appengine.Main()
 	log.Fatal(http.ListenAndServe(":8000", router))
 }
